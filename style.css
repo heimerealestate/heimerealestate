@@ -11,6 +11,80 @@ body {
     background: linear-gradient(to top, rgb(0, 0, 0), rgb(53, 49, 49), rgb(19, 18, 18), rgb(0, 0, 0));
 }
 
+.loadingscreen {
+    display: flex;
+    z-index: -3;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    animation: loading-screen 3s ease-in-out forwards 0s;
+    position: absolute;
+}
+
+.loadingscreen img {
+    padding-top: 200px;
+    height: 400px;
+    animation: loading-screenimage 3s;
+}
+
+@keyframes loading-screen {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loading-screenimage {
+    from {
+        height: 400px;
+    }
+
+    to {
+        height: 500px;
+    }
+}
+
+@keyframes animation-navbar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animation-intro {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animation-background {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animation-category {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .navbar {
     top: 0;
     display: flex;
@@ -20,6 +94,8 @@ body {
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
     z-index: 2;
+    animation: animation-navbar 1s forwards 3s;
+    opacity: 0;
 }
 
 .navbar .logo-container {
@@ -100,6 +176,8 @@ input::placeholder {
     background-repeat: no-repeat;
     width: 100%;
     top: 0;
+    animation: animation-background 1s forwards 3s;
+    opacity: 0;
 }
 
 .intro-section {
@@ -116,7 +194,8 @@ input::placeholder {
     height: 969px;
     z-index: 1;
     position: relative;
-
+    animation: animation-intro 1s forwards 3s;
+    opacity: 0;
 }
 
 .intro-section p {
@@ -151,6 +230,8 @@ input::placeholder {
     padding-right: 100px;
     padding-left: 100px;
     gap: 70px;
+    animation: animation-category 1s forwards 3s;
+    opacity: 0;
 }
 
 .category-section .category {
