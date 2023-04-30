@@ -20,9 +20,8 @@
                 <li><a href="#">Lokale</a></li>
                 <li><a href="#">Garazha</a></li>
             </ul>
-            <div class="searchbar">
-                <input type="text" placeholder="Kërko">
-                <i class="ri-search-line"></i>
+            <div class="button">
+                <i class="ri-menu-line"></i>
             </div>
         </div>
         <div class="intro-section">
@@ -51,5 +50,12 @@
             <img id="p-img" src="partner3.png" alt="">
         </div>
         <div class="footer">Heimer Real Estate 2023. All rights reserved © </div>
+        <script>
+            button = document.querySelector('.button');
+            dropDown = document.querySelector('ul');
+            button.onclick = function (){
+                dropDown.classList.toggle('active');
+            }
+        </script>
     </body>
 </html>
